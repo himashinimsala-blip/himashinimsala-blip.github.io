@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TECH ZONE GADGET STORE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f4f6f9;
+}
+
+/* HEADER */
+header{
+    background:#0a1f44;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+header h1{
+    margin:0;
+}
+
+.subtitle{
+    color:#ccc;
+    font-size:14px;
+}
+
+/* OFFER */
+.offer{
+    background:linear-gradient(45deg,orange,red);
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-weight:bold;
+}
+
+/* SECTION */
+.section{
+    padding:20px;
+}
+
+.section-title{
+    font-size:22px;
+    margin:15px 0;
+    border-left:5px solid orange;
+    padding-left:10px;
+    color:#0a1f44;
+}
+
+/* BRAND BLOCK */
+.brand-box{
+    background:white;
+    margin-bottom:20px;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.brand-title{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+/* PRODUCT GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+}
+
+.product{
+    background:#f9f9f9;
+    border-radius:8px;
+    padding:8px;
+    text-align:center;
+}
+
+.product img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:6px;
+}
+
+/* TEXT */
+.price{
+    color:green;
+    font-weight:bold;
+    margin:5px 0;
+}
+
+.stock{
+    font-size:12px;
+}
+
+.in{color:green;}
+.out{color:red;}
+
+/* BUTTON */
+button{
+    margin-top:5px;
+    width:100%;
+    padding:6px;
+    border:none;
+    border-radius:5px;
+    background:#0a1f44;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:orange;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .grid{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:600px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+}
+.footer{
+    background:#0a1f44;
+    color:white;
+    margin-top:30px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.footer-item{
+    background:#112b5c;
+    padding:12px 18px;
+    margin:8px;
+    border-radius:8px;
+    font-size:14px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.footer-item:hover{
+    background:orange;
+    color:black;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:10px;
+    font-size:13px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    color:#ccc;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#112b5c;
+    padding:12px 20px;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* NAV LINKS */
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.nav-links li a:hover{
+    color:orange;
+}
+
+/* MENU ICON */
+.menu-icon{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle{
+    display:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .menu-icon{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:60px;
+        right:0;
+        background:#112b5c;
+        flex-direction:column;
+        width:200px;
+        display:none;
+        padding:10px;
+    }
+
+    /* TOGGLE USING CSS */
+    #menu-toggle:checked ~ .nav-links{
+        display:flex;
+    }
+}
+</style>
+
+</head>
+<nav class="navbar">
+    <div class="logo">TECH ZONE</div>
+
+    <!-- hidden checkbox -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- menu icon -->
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#smartPhones">Smartphones</a></li>
+        <li><a href="#laptops">Laptops</a></li>
+        <li><a href="#watches">Watches</a></li>
+        <li><a href="#audio">Audio</a></li>
+        <li><a href="#gaming">Gaming</a></li>
+    </ul>
+</nav>
+<body>
+
+<header>
+    <h1>TECH ZONE GADGET STORE</h1>
+    <div class="subtitle">The Best Online Gadget Store</div>
+</header>
+
+<div class="offer">
+🔥 NEW ARRIVALS - 10% SPECIAL OFFER LIMITED TIME ONLY 🔥
+</div>
+
+<!-- SMARTPHONES -->
+<div class="section" id="smartPhones">
+<div class="section-title">📱 Smart Phones</div>
+<div class="brand-box">
+<div class="brand-title">Apple</div>
+<div class="grid">
+
+<div class="product">
+<img src="https://lasermobile.lk/wp-content/uploads/2025/10/1-17-400x380.png">
+<p>iPhone 17 Pro</p>
+<div class="price">LKR 439,000</div>
+<div class="stock in">In Stock</div>
+<button>Buy Now</button>
+</div>
+
+<div class="product">
+<img src="https://lasermobile.lk/wp-content/uploads/2025/10/1-16-400x380.png">
+<p>iPhone 17</p>
+<div class="price">LKR 289,000</div>
+<div class="stock out">Out of Stock</div>
+<button disabled>Buy Now</button>
+</div>
+
+<div class="product">
+<img src="https://lasermobile.lk/wp-content/uploads/2024/10/Apple-iPhone-16-Pro-400x380.jpg">
+<p>iPhone 16 Pro</p>
+<div class="price">LKR 335,000</div>
+<div class="stock in">In Stock</div>
+<button>Buy Now</button>
+</div>
+
+<div class="product">
+<img src="https://lasermobile.lk/wp-content/uploads/2024/10/iPhone-16-Pro-Max-400x380.jpg">
+<p>iPhone 16 Pro Max</p>
+<div class="price">LKR 401,000</div>
+<div class="stock in">In Stock</div>
+<button>Buy Now</button>
+</div>
+
+<div class="product">
+<img src="https://lasermobile.lk/wp-content/uploads/2024/09/Apple-iPhone-15-Plus-Sri-Lanka-3-400x380.jpg">
+<p>iPhone 15 Plus</p>
+<div class="price">LKR 280,000</div>
+<div class="stock out">Out of Stock</div>
+<button disabled>Buy Now</button>
+</div>
+
+</div>
+</div>
+
+<!-- SAMSUNG -->
+<div class="brand-box">
+<div class="brand-title">Samsung</div>
+<div class="grid">
+<div class="product"><img src="https://lasermobile.lk/wp-content/uploads/2026/04/1-2-400x380.png"><p>Galaxy S26</p><div class="price">LKR 270,000</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://lasermobile.lk/wp-content/uploads/2026/04/1-400x380.png"><p>Galaxy S25</p><div class="price">LKR 230,000</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://lasermobile.lk/wp-content/uploads/2026/03/1-2-400x380.png"><p>Galaxy S26 Ultra 5G</p><div class="price">LKR 350,000 </div><div class="stock out">Out of Stock</div><button disabled>Buy Now</button></div>
+<div class="product"><img src="https://lasermobile.lk/wp-content/uploads/2025/12/1-14-400x380.png"><p>Galaxy A17 4G</p><div class="price">LKR 53,500</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://lasermobile.lk/wp-content/uploads/2026/05/1-400x380.png"><p>Galaxy A57 5G</p><div class="price">LKR 145,000</div><div class="stock out">Out of Stock</div><button disabled>Buy Now</button></div>
+</div>
+</div>
+
+</div>
+
+<!-- LAPTOPS -->
+<div class="section" id="laptops">
+<div class="section-title">Laptops</Div>
+<div class="brand-box">
+<div class="grid">
+<div class="product"><img src="https://trustedge.lk/wp-content/uploads/2026/02/lenovo-loq-15ahp10-15-6-inch-fhd-144hz-display-price-in-sri-lanka-600x600.png"><p>Lenovo LOQ 15AHP10 Ryzen 7 RTX 5050</p><div class="price">LKR 395,900</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://trustedge.lk/wp-content/uploads/2025/10/4-5-600x600.png"><p>HP Laptop 15 Ultra 7 | 32GB | 512GB Fingerprint</p><div class="price">LKR 289,900</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://trustedge.lk/wp-content/uploads/2025/10/4-3.png"><p>ASUS Vivobook 15 X1504V Intel i5-13Gen 8GB | 512GB</p><div class="price">LKR 159,900</div><div class="stock out">Out of Stock</div><button disabled>Buy Now</button></div>
+<div class="product"><img src="https://trustedge.lk/wp-content/uploads/2025/10/2-5-600x600.png"><p>ASUS TUF Gaming Laptop A15 AMD R7-7445HS | RTX3050</p><div class="price">LKR 269,900</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+</div>
+</div>
+
+</div>
+
+<!-- WATCHES -->
+<div class="section" id="watches">
+<div class="section-title">⌚ Watches</div>
+<div class="brand-box">
+<div class="brand-title">Smart Watches</div>
+<div class="grid">
+<div class="product"><img src="https://lasermobile.lk/wp-content/uploads/2025/12/1-400x380.png"><p>Apple Watch S11</p><div class="price">LKR 115,000</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://lasermobile.lk/wp-content/uploads/2025/11/1-2-400x380.png"><p>Samsung Galaxy Watch 8</p><div class="price">LKR 66,000</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://lasermobile.lk/wp-content/uploads/2025/05/1-26-400x380.png"><p>Redmi Watch 5 Active</p><div class="price">LKR 15,990</div><div class="stock out">Out of Stock</div><button disabled>Buy Now</button></div>
+<div class="product"><img src="https://lasermobile.lk/wp-content/uploads/2025/04/1-14-400x380.png"><p>Samsung Galaxy Watch 7</p><div class="price">LKR 43,500</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://lasermobile.lk/wp-content/uploads/2025/05/1-25-520x510.png"><p>Redmi Watch 5 Lite</p><div class="price">LKR 19,990</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+</div>
+</div>
+
+</div>
+
+<!-- Audio & Headphones -->
+<div class="section" id="audio">
+<div class="section-title">🎧Audio & Headphones</div>
+
+<div class="brand-box">
+
+<div class="grid">
+<div class="product"><img src="https://audioarray.in/cdn/shop/files/01_02fd7ec9-5018-4199-97c9-0ddbf03f9d9c.jpg?v=1759562927&width=600"><p>AH-40-SL Wired Over-Ear Headphones</p><div class="price">LKR 1,377</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://audioarray.in/cdn/shop/files/71-Eom8AZ-L._SL1500__1.jpg?v=1760427196&width=600"><p>Audio Array PB-14 Professional Recording Bundle AI-12 Sound Card</p><div class="price">LKR 5,299</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://audioarray.in/cdn/shop/files/71272w8ZFQL._SL1500__1.jpg?v=1759561898&width=600"><p>Audio Array AH-60-BL Professional Monitoring Headphones</p><div class="price">LKR 2,119</div><div class="stock out">Out of Stock</div><button disabled>Buy Now</button></div>
+<div class="product"><img src="https://audioarray.in/cdn/shop/files/71wo6gyqEGL._SL1500__1.jpg?v=1760426082&width=600"><p>Audio Array PB-10 Professional Studio Bundle With Headphones</p><div class="price">LKR 10,864</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://lifemobile.lk/wp-content/uploads/2025/10/Remax-RM-706-Gaming-Headphones-with-RGB-USB-Aux-300x300.jpg"><p>Remax RM-706 Gaming Headphones with RGB – USB & Aux
+</p><div class="price">LKR 5,490</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+</div>
+</div>
+
+</div>
+
+<!-- ACCESSORIES -->
+<div class="section" id="gaming">
+<div class="section-title"> Gaming Accessories</div>
+
+<div class="brand-box">
+<div class="grid">
+<div class="product"><img src="https://thefoschini.vtexassets.com/arquivos/ids/208353066-300-400/86a8de0c-812f-4a70-951f-56d11730ca92.png?v=638889790839430000"><p>Turtle Beach Recon 50X Gaming Headset</p><div class="price">LKR 499</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://thefoschini.vtexassets.com/arquivos/ids/224247873-300-400/fd9e54d8-3655-42f1-8fee-1738ecc62a12.png?v=639070020064770000"><p>Xbox Series Robot White Wireles Controller</p><div class="price">LKR 1,699</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://thefoschini.vtexassets.com/arquivos/ids/192980033-1200-1600?v=638848674643930000&width=1200&height=1600&aspect=true"><p>Razer BlackWidow V4 Wired Keyboard</p><div class="price">LKR 2,999</div><div class="stock out">Out of Stock</div><button disabled>Buy Now</button></div>
+<div class="product"><img src="https://thefoschini.vtexassets.com/arquivos/ids/194395231-1200-1600?v=638849269096730000&width=1200&height=1600&aspect=true"><p>
+Playstation 5 Pulse Explore Wireless Earbuds - PS5</p><div class="price">LKR 4,999</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+<div class="product"><img src="https://thefoschini.vtexassets.com/arquivos/ids/204626117-300-400/60164095.jpg?v=638888256715070000"<p>Xbox Robot White Controller and Charging Kit</p><div class="price">LKR 2,199</div><div class="stock in">In Stock</div><button>Buy Now</button></div>
+</div>
+</div>
+
+</div>
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-item">🔒 Secure Payment</div>
+        <div class="footer-item">🚚 Islandwide Delivery</div>
+        <div class="footer-item">💵 Cash on Delivery (Colombo Only)</div>
+        <div class="footer-item">🛠 After Sales Support</div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 TECH ZONE GADGET STORE | All Rights Reserved
+    </div>
+</footer>
+
+</body>
+</html>
